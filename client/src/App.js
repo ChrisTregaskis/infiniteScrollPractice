@@ -1,5 +1,5 @@
 import React from 'react';
-import Images from "./Components/images";
+import Images from "./Components/Images";
 import './App.css';
 
 function App() {
