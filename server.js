@@ -7,7 +7,7 @@ const express = require('express');
 // instantiate unsplash obj that takes all our parameters and our config.
 // we can then use it to make requests to the api
 const unsplash = new Unsplash({
-    applicationId: config.get('APPLICATION_ID'),
+    accessKey: config.get('APPLICATION_ID'),
     secret: config.get('SECRET'),
     callbackUrl: config.get('CALLBACK_URL')
 });
@@ -15,8 +15,9 @@ const unsplash = new Unsplash({
 const app = express();
 
 //api route
-app.get('./api/photos', (req, res) => {
-    unsplash.photos.listPhotos(1, 30)
+app.get('/api/photos', (req, res) => {
+    unsplash.photos
+        .listPhotos(1, 30)
         .then(toJson)
         .then(json => res.json(json));
 });
