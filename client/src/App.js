@@ -3,9 +3,22 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
+      <div id="root">
+          <div className="hero is-fullheight is-bold is-info">
+              <div className="hero-body">
+                  <div className="container">
+                      <div className="header content">
+                          <h1 className="title is-1">
+                              Infinite Scroll Unsplash Practice
+                          </h1>
+                      </div>
+                      <div className="images">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   );
 }
 
